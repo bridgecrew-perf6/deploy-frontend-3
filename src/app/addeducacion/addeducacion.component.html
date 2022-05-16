@@ -1,0 +1,15 @@
+<form class="card-body" >
+    <label >Carrera:</label>
+    <input [(ngModel)]="educacion.carrera" name="carrera" type="text"  style="width: 250px"  class="form-control"  >
+    <div >
+    <label > Instituto:</label>
+    <input [(ngModel)]="educacion.instituto" name="instituto" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label > Período:</label>
+    <input [(ngModel)]="educacion.periodo" name="periodo" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label >Imagen del Instituto:</label>                   
+    <input [(ngModel)]="educacion.url" name="url" type="text"  style="width: 250px" class="form-control" > 
+    <br>
+    <button style="margin-left:5px" type="submit" class="btn btn-dark" (click)="Guardar()">Agregar</button>
+

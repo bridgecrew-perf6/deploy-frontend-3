@@ -1,0 +1,17 @@
+<form class="card-body" >
+    <label >Puesto:</label>
+    <input [(ngModel)]="experiencia.puesto" name="puesto" type="text"  style="width: 250px"  class="form-control"  >
+    <div >
+    <label > Empleador:</label>
+    <input [(ngModel)]="experiencia.empleador" name="empleador" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label > Período:</label>
+    <input [(ngModel)]="experiencia.periodo" name="periodo" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label > Actividades:</label>
+     <input [(ngModel)]="experiencia.actividades" name="empleador" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label >Imagen de la Empresa:</label>                   
+    <input [(ngModel)]="experiencia.url" name="url" type="text"  style="width: 250px" class="form-control" > 
+    <br>
+    <button style="margin-left:5px" type="submit" class="btn btn-dark" (click)="Actualizar(experiencia)">Actualizar</button>

@@ -1,0 +1,10 @@
+<form class="card-body" >
+    <label >Idioma:</label>
+    <input [(ngModel)]="idioma.idioma" name="idioma" type="text"  style="width: 250px"  class="form-control"  >
+    <div >
+    <label >Nivel:</label>
+    <input [(ngModel)]="idioma.nivel" name="nivel" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <br>
+    <button style="margin-left:5px" type="submit" class="btn btn-dark" (click)="Actualizar(idioma)">Actualizar</button>
+

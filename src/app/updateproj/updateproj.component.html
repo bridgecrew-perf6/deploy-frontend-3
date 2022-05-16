@@ -1,0 +1,15 @@
+<form class="card-body" >
+    <label >Proyecto:</label>
+    <input [(ngModel)]="proyecto.nombre" name="nombre" type="text"  style="width: 250px"  class="form-control"  >
+    <div >
+    <label >Fecha:</label>
+    <input [(ngModel)]="proyecto.fecha" name="fecha" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label >Descripción:</label>
+    <input [(ngModel)]="proyecto.descripcion" name="descripcion" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+    <label >Link:</label>
+    <input [(ngModel)]="proyecto.url" name="url" type="text" style="width: 250px"  class="form-control"  >
+    <div>   
+    <br>
+    <button style="margin-left:5px" type="submit" class="btn btn-dark" (click)="Actualizar(proyecto)">Actualizar</button>

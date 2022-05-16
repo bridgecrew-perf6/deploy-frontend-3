@@ -1,0 +1,9 @@
+<form class="card-body" >
+    <label >Hard Skill:</label>
+    <input [(ngModel)]="tecnologia.tecnologia" name="tecnologia" type="text"  style="width: 250px"  class="form-control"  >
+    <div >
+    <label >Nivel:</label>
+    <input [(ngModel)]="tecnologia.nivel" name="nivel" type="text" style="width: 250px"  class="form-control"  >
+    <div>
+        <br>
+    <button style="margin-left:5px" type="submit" class="btn btn-dark" (click)="Actualizar(tecnologia)">Actualizar</button>

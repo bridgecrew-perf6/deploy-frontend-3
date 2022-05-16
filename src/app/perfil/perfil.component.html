@@ -1,0 +1,155 @@
+<br>
+<nav class="navbar navbar-dark bg-primary">
+    <a href ="/" class="navbar-brand">Giuliana Castellini
+    </a>
+   
+    <a   aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://www.linkedin.com/in/giuliana-castellini-21890210a/" title="YouTube">
+        <svg style="margin-right:5px;margin-left: 10px;" id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+        </svg>
+      </a>
+      
+      </nav>
+
+      <br>
+      <div class="container p-14  border border-dark" >
+      <div class="row justify-content-left" *ngFor="let persona of personas" >
+      <img src={{persona.banner}} height="600" width="1200"  >
+      </div>
+      <img *ngFor="let persona of personas" src={{persona.foto}} height="200" width="200" class="rounded-circle">
+      <br>
+      <div class="row justify-content-around">
+      <div class="col-sm-2  justify-content-center  " *ngFor="let persona of personas">
+          <h4>{{persona.nombre}}
+            <button  class="btn btn-warning" *ngIf="authservice.isLoggedIn" (click)="EditarPersona(persona)">Editar</button>
+          </h4>
+
+          <h6>{{persona.puesto}}
+          </h6> 
+          <h6>{{persona.ciudad}}</h6>       
+    </div>
+   
+    <div class="col-8 justify-content-right border border-dark rounded " >
+        <h4>Acerca de</h4>
+        <p *ngFor="let persona of personas">
+          {{persona.descripcion}}
+          
+        </p>
+        </div>
+        <br>
+    </div>
+    </div>
+    <br>
+    <div class="container p-14  border border-dark rounded" >
+      <br>
+      <div class="card">
+        <div class="card-header">
+          <h3>Experiencia
+            <button style="margin-left:5px" type="submit" class="btn btn-danger" *ngIf="authservice.isLoggedIn"  (click)="AgregarExp()">Agregar</button>
+          </h3>
+        </div>
+        <br>
+        <div class="col-md-8 list-group justify-content-right">  
+          
+  <div  *ngFor="let experiencia of experiencias" >
+    <a  class=" flex-column align-items-start col float:right" >
+      <ul >
+        <h5 class="mb-1">
+         
+         {{experiencia.puesto}}   
+        </h5>
+        <p class="mb-1">
+          <img  src={{experiencia.url}} height="50" width="50" >
+{{experiencia.empleador}}
+<small>
+{{experiencia.periodo}}
+</small>
+</p>
+<small>
+{{experiencia.actividades}}
+</small>
+
+</ul>
+
+</a>
+
+<a  class=" flex-column  col float:right" >
+  <button (click)="Editar(experiencia)" class="btn btn-warning" *ngIf="authservice.isLoggedIn">Editar</button>
+  <button (click)="Delete(experiencia)" class="btn btn-success" style="margin-left:20px;" *ngIf="authservice.isLoggedIn">Borrar</button>
+</a>
+
+</div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    <h3>Educación
+      <button style="margin-left:5px" type="submit" class="btn btn-danger" *ngIf="authservice.isLoggedIn"  (click)="AgregarEdu()">Agregar</button>
+    </h3>
+  </div>
+  <br>
+  <div class="col-md-8 list-group justify-content-right"> 
+<div  *ngFor="let educacion of educaciones" >
+<a  class=" align-items-start col float:right" >
+<ul >
+  <h5 class="mb-1">
+    {{educacion.carrera}}   
+  </h5>
+  <p class="mb-1">
+    <img  src={{educacion.url}} height="50" width="50" >
+{{educacion.instituto}}
+<small>
+{{educacion.periodo}}
+</small>
+</p>
+</ul>
+</a>
+<a  class=" flex-column  col float:right" >
+  <button (click)="EditarEducacion(educacion)" class="btn btn-warning" *ngIf="authservice.isLoggedIn">Editar</button>
+  <button (click)="DeleteEduc(educacion)" class="btn btn-success" style="margin-left:20px;" *ngIf="authservice.isLoggedIn">Borrar</button>
+</a>
+
+</div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header">
+      <h3>Habilidades</h3>
+    </div>
+    <div>
+  <app-charts></app-charts>
+  <app-editskills  *ngIf="authservice.isLoggedIn"></app-editskills>
+</div>
+<div class="card">
+  <div class="card-header">
+    <h3>Proyectos
+      <button style="margin-left:5px" type="submit" class="btn btn-danger" *ngIf="authservice.isLoggedIn"  (click)="AgregarProj()">Agregar</button>
+    </h3>
+  </div>
+  <br>
+  <div  *ngFor="let proyecto of proyectos">
+    <a  class=" flex-column align-items-start col float:right" >
+  <ul >
+    <h5 class="mb-1">
+     {{proyecto.nombre}}   
+    </h5>
+    <p class="mb-1">
+{{proyecto.fecha}}
+</p>
+<small>
+{{proyecto.descripcion}}
+<button (click)="ProjUrl()" class="btn btn-info" style="margin-left:20px;">Acceder</button>
+</small>
+</ul>
+</a>
+<a  class=" flex-column  col float:right" >
+  <button (click)="EditarProyectos(proyecto)" class="btn btn-warning" *ngIf="authservice.isLoggedIn">Editar</button>
+  <button (click)="DeleteProj(proyecto)" class="btn btn-success" style="margin-left:20px;" *ngIf="authservice.isLoggedIn">Borrar</button>
+</a>
+</div>
+
+</div>
+</div>
+    

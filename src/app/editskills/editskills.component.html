@@ -1,0 +1,37 @@
+<form class="card-body" >
+    <div class="row">
+    <div class="col-md-4  -offset " >
+    <h5 >Hard Skills:
+      <button style="margin-left:5px" type="submit" class="btn btn-danger" *ngIf="authservice.isLoggedIn"  (click)="Agregar()">Agregar</button>
+    </h5>
+    <div  *ngFor="let tecnologia of tecnologias" >
+     <p> {{tecnologia.tecnologia}}
+     <button style="margin-left:5px" type="submit" class="btn btn-warning" *ngIf="authservice.isLoggedIn" (click)="ObtenerTec(tecnologia)">Editar</button>
+     <button (click)="Delete(tecnologia)" class="btn btn-success" style="margin-left:10px;" *ngIf="authservice.isLoggedIn">Borrar</button>  
+    </p>
+</div>
+</div>
+  <div class="col-md-4 offset" >
+    <h5 >Soft Skills:
+      <button style="margin-left:5px" type="submit" class="btn btn-danger" *ngIf="authservice.isLoggedIn"  (click)="AgregarSoft()">Agregar</button>
+    </h5>
+    <div  *ngFor="let soft of softskills" >
+     <p> {{soft.skill}}
+     <button style="margin-left:5px" type="submit" class="btn btn-warning" *ngIf="authservice.isLoggedIn" (click)="ObtenerSoft(soft)" >Editar</button>
+     <button (click)="DeleteSoft(soft)" class="btn btn-success" style="margin-left:10px;" *ngIf="authservice.isLoggedIn">Borrar</button>    
+    </p>
+</div>
+</div>
+<div class="col-md-offset-8" >
+  <h5 >Idiomas:
+    <button style="margin-left:5px" type="submit" class="btn btn-danger" *ngIf="authservice.isLoggedIn"  (click)="AgregarLang()">Agregar</button>
+  </h5>
+  <div  *ngFor="let idioma of idiomas" >
+   <p> {{idioma.idioma}}
+   <button style="margin-left:5px" type="submit" class="btn btn-warning" *ngIf="authservice.isLoggedIn" (click)="ObtenerLang(idioma)">Editar</button>
+   <button (click)="DeleteLang(idioma)" class="btn btn-success" style="margin-left:10px;" *ngIf="authservice.isLoggedIn">Borrar</button>    
+  </p>
+</div>
+</div>
+</div>
+</form>
