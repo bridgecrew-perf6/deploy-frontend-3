@@ -79,6 +79,7 @@ this.api.getProyectos().subscribe(data=>{
     .subscribe(data=>{
       this.experiencias=this.experiencias.filter(ex=>ex!==experiencia);
       alert("Se eliminó con éxito!");
+      location.reload();
     })
   }
   DeleteEduc(educacion:Educacion){
@@ -86,6 +87,7 @@ this.api.getProyectos().subscribe(data=>{
     .subscribe(data=>{
       this.educaciones=this.educaciones.filter(ed=>ed!==educacion);
       alert("Se eliminó con éxito!");
+      location.reload();
     })
   }
   DeleteProj(proj:Proyectos){
@@ -93,6 +95,7 @@ this.api.getProyectos().subscribe(data=>{
     .subscribe(data=>{
       this.proyectos=this.proyectos.filter(pr=>pr!==proj);
       alert("Se eliminó con éxito!");
+      location.reload();
      })
   }
   ProjUrl(){

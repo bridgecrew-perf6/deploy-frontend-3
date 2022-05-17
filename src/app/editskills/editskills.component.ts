@@ -58,6 +58,7 @@ export class EditskillsComponent implements OnInit {
           .subscribe(data=>{
             this.tecnologias=this.tecnologias.filter(t=>t!==tecnologia);
             alert("Se eliminó con éxito!");
+            location.reload();
           })
         }
 
@@ -66,6 +67,7 @@ export class EditskillsComponent implements OnInit {
           .subscribe(data=>{
             this.softskills=this.softskills.filter(s=>s!==this.soft);
             alert("Se eliminó con éxito!");
+            location.reload();
           })
         }
         DeleteLang(lang:Idiomas){
@@ -73,6 +75,7 @@ export class EditskillsComponent implements OnInit {
           .subscribe(data=>{
             this.idiomas=this.idiomas.filter(i=>i!==this.lang);
             alert("Se eliminó con éxito!");
+            location.reload();
           })
         }
 
