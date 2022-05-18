@@ -13,14 +13,14 @@ import { Proyectos } from './modelo/proyectos';
 })
 export class ApiService {
  
-  url='http://localhost:8080/login';
+  url='https://spring-gcastellini.herokuapp.com/login';
   url2='https://spring-gcastellini.herokuapp.com/experiencias'
-  url3='http://localhost:8080/educacion'
-  url4='http://localhost:8080/tecnologias'
-  url5='http://localhost:8080/skills'
-  url6='http://localhost:8080/idiomas'
-  url7='http://localhost:8080/personas'
-  url8='http://localhost:8080/proyectos'
+  url3='https://spring-gcastellini.herokuapp.com/educacion'
+  url4='https://spring-gcastellini.herokuapp.com/tecnologias'
+  url5='https://spring-gcastellini.herokuapp.com/skills'
+  url6='https://spring-gcastellini.herokuapp.com/idiomas'
+  url7='https://spring-gcastellini.herokuapp.com/personas'
+  url8='https://spring-gcastellini.herokuapp.com/proyectos'
 
 
 
