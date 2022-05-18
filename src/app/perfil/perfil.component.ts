@@ -99,7 +99,10 @@ this.api.getProyectos().subscribe(data=>{
      })
   }
   ProjUrl(){
-    window.open('https://github.com/gcastellini/YoProgramo-gcastellini')
+    window.open('https://github.com/gcastellini/deploy-frontend')
+  }
+  ProjUrl2(){
+    window.open('https://github.com/gcastellini/deploy-backend')
   }
 }
 function id(id: any, arg1: string) {
