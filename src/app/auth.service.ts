@@ -13,7 +13,7 @@ import { ApiService } from './api.service';
 })
 
 export class AuthService {
-url='Http://localhost:8080/signup';
+url='https://spring-gcastellini.herokuapp.com/signup';
 
   constructor(private http: HttpClient, private apiService: ApiService) { 
     const token = localStorage.getItem('auth');
