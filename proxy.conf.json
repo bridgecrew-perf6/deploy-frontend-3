@@ -1,6 +1,6 @@
 {
     "/apidemo/*":{
-        "target":"http://localhost:8080",
+        "target":"https://spring-gcastellini.herokuapp.com/",
         "secure":false,
         "logLevel":"debug"
 
