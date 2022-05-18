@@ -14,7 +14,7 @@ import { Proyectos } from './modelo/proyectos';
 export class ApiService {
  
   url='http://localhost:8080/login';
-  url2='http://localhost:8080/experiencias'
+  url2='https://spring-gcastellini.herokuapp.com/experiencias'
   url3='http://localhost:8080/educacion'
   url4='http://localhost:8080/tecnologias'
   url5='http://localhost:8080/skills'
